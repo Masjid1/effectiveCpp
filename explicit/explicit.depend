@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1528336370 source:e:\workspaces\cpp\effectivecpp\explicit\main.cpp
+	<iostream>
+	<string>
+

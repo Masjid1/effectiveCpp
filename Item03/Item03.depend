@@ -2,3 +2,10 @@
 1528449952 source:e:\workspaces\cpp\effectivecpp\item03\main.cpp
 	<iostream>
 
+1528699755 source:g:\workspaces\github\effectivecpp\item03\main.cpp
+	"myClass.h"
+
+1528699755 g:\workspaces\github\effectivecpp\item03\myclass.h
+	<iostream>
+	<cstring>
+

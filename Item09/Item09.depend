@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1528720593 source:g:\workspaces\github\effectivecpp\item09\main.cpp
+	"main.h"
+
+1528723048 g:\workspaces\github\effectivecpp\item09\main.h
+	<iostream>
+	<string>
+	<cstdio>
+

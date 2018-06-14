@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1528857223 source:g:\workspaces\github\effectivecpp\item15\main.cpp
+	"Item15.h"
+
+1528854011 g:\workspaces\github\effectivecpp\item15\main.h
+	<iostream>
+	<string>
+
+1528857406 source:g:\workspaces\github\effectivecpp\item15\item15.cpp
+	"Item15.h"
+
+1528857026 g:\workspaces\github\effectivecpp\item15\item15.h
+	<iostream>
+	<string>
+

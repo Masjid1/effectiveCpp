@@ -40,11 +40,12 @@ public:
 private:
     int n, d;
     /// warning: 'Rational& operator*(const Rational&, const Rational&)' should return by value [-Weffc++]
-    /// ¸ù¾İeffective c++½¨Òé£¬Ó¦¸Ã¸ÄÎªreturn by value.
+    /// æ ¹æ®effective c++å»ºè®®ï¼Œåº”è¯¥æ”¹ä¸ºreturn by value.
 
-    /// ´ËÎªÓÑÔªº¯Êı£¬ËùÒÔÓĞÁ½¸ö²ÎÊı£¬¿ÉÒÔÎªprivateµÄ¡£
+    /// æ­¤ä¸ºå‹å…ƒå‡½æ•°ï¼Œæ‰€ä»¥æœ‰ä¸¤ä¸ªå‚æ•°ï¼Œå¯ä»¥ä¸ºprivateçš„ã€‚
     friend Rational& operator* (const Rational& lhs, const Rational& rhs)
     {
+        /// static å¯¹è±¡åªåˆå§‹åŒ–ï¼ˆæˆ–èµ‹å€¼ï¼‰ä¸€æ¬¡ï¼Œæ‰€ä»¥resultæ°¸è¿œä¸º(n=21, d=21)ã€‚
         static Rational result(lhs.n * rhs.n, lhs.d * rhs.d);
         return result;
     }
@@ -53,24 +54,28 @@ private:
 
 int main()
 {
-    /// Èç¹ûÏÂÃæµÄsfsÔÚÁíÒ»¸ö±àÒëµ¥ÔªÖĞ¶¨Òå£¨µÚÒ»ĞĞ£©£¬
-    /// ÔòÊä³öÓï¾ä(µÚ¶şĞĞ)½«ÊÇÎ´¶¨ÒåµÄ¡£
+    /// å¦‚æœä¸‹é¢çš„sfsåœ¨å¦ä¸€ä¸ªç¼–è¯‘å•å…ƒä¸­å®šä¹‰ï¼ˆç¬¬ä¸€è¡Œï¼‰ï¼Œ
+    /// åˆ™è¾“å‡ºè¯­å¥(ç¬¬äºŒè¡Œ)å°†æ˜¯æœªå®šä¹‰çš„ã€‚
     static FileSystem sfs;
     cout << sfs.numDisks() << endl;
-    /// ÏÂÃæÒ»ĞĞÍ¨¹ıº¯Êıµ÷ÓÃ£¬È·±£¶ÔÏóµÄ¶¨ÒåºÍÊ¹ÓÃ£¨Êä³öÓï¾ä£©ÔÚÍ¬Ò»¸ö±àÒëµ¥Ôª£¬²»»á³öÏÖÎ´¶¨ÒåĞĞÎª¡£
+    /// ä¸‹é¢ä¸€è¡Œé€šè¿‡å‡½æ•°è°ƒç”¨ï¼Œç¡®ä¿å¯¹è±¡çš„å®šä¹‰å’Œä½¿ç”¨ï¼ˆè¾“å‡ºè¯­å¥ï¼‰åœ¨åŒä¸€ä¸ªç¼–è¯‘å•å…ƒï¼Œä¸ä¼šå‡ºç°æœªå®šä¹‰è¡Œä¸ºã€‚
     cout << tfs().numDisks() << endl;
 
     Rational a(3,7), b(7,3), c(42, 89), d;
 
     int ii =34;
     double dd = 4.2;
+    /// å› ä¸º*è¿ç®—è¿”å›çš„æ˜¯å¯¹é™æ€å¯¹è±¡çš„å¼•ç”¨ï¼Œä¹‹åçš„æ‰€æœ‰çš„*è¿ç®—ä¸­é™æ€å¯¹è±¡ä¸å†å˜åŒ–ï¼Œæ‰€ä»¥è¿”å›å€¼å¼•ç”¨çš„å¯¹è±¡ä¸å˜ï¼Œæ’ä¸º(n=21, d=21)ã€‚
+    d = a*b*c*a*b;
 
-    d = a*b*c;
-    pair<int, int> result = d.valueFraction();
-    cout << result.first << '/' << result.second << endl;
+    pair<int, int> n_m = d.valueFraction();
+    cout << n_m.first << '/' << n_m.second << endl;
     cout << d.valueDecimal() << endl;
 
-    cout << boolalpha << ((a*b)==(a*c)) << noboolalpha << endl;
+    /// ç­‰å·ä¸¤è¾¹éƒ½æ˜¯å¯¹operator*()å‡½æ•°å†…é™æ€å¯¹è±¡çš„å¼•ç”¨
+    cout << boolalpha << ((b*b)==(a*c)) << noboolalpha << endl;
+
+    cout << (b*b).valueDecimal() << endl;
 
     cout << "Hello world!" << endl;
     return 0;

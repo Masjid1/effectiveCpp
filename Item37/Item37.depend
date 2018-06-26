@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1529652874 source:e:\workspaces\cpp\effectivecpp\item37\main.cpp
+	<iostream>
+	"Shape.h"
+
+1529651219 e:\workspaces\cpp\effectivecpp\item37\include\shape.h
+
+1529652262 source:e:\workspaces\cpp\effectivecpp\item37\src\shape.cpp
+	"Shape.h"
+	<iostream>
+

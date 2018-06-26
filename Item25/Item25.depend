@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1529393002 source:e:\workspaces\cpp\effectivecpp\item25\main.cpp
+	<iostream>
+	"main.h"
+
+1529396132 e:\workspaces\cpp\effectivecpp\item25\main.h
+	<iostream>
+	<vector>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1529684364 source:e:\workspaces\github\effectivecpp\item39-emptyclass\src\myclass.cpp
+	"myClass.h"
+	<iostream>
+
+1529684492 e:\workspaces\github\effectivecpp\item39-emptyclass\include\myclass.h
+

@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1529813780 source:e:\workspaces\github\effectivecpp\item38\main.cpp
+	<istream>
+	<iostream>
+	<string>
+	"Set.h"
+	<set>
+
+1529810963 source:e:\workspaces\github\effectivecpp\item38\src\set.cpp
+	"Set.h"
+	<algorithm>
+
+1529814050 e:\workspaces\github\effectivecpp\item38\include\set.h
+	<list>
+	<iostream>
+	<algorithm>
+
